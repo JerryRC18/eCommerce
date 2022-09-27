@@ -103,7 +103,7 @@ menuItems.forEach( (item, index) => {
         currrentProductImg.src = choosenProduct.colors[0].img
         
         currentProductColors.forEach( (color, index) => {
-            color.style.blackgroundColor = choosenProduct.colors[index].code
+            color.style.backgroundColor = choosenProduct.colors[index].code
         })
         console.log(choosenProduct)
     })
@@ -119,10 +119,10 @@ currentProductColors.forEach( (color, index) => {
 currentProductSizes.forEach( (size) => {
     size.addEventListener("click", () => {
         currentProductSizes.forEach( (size) =>{
-            size.style.blackgroundColor= "white"
+            size.style.backgroundColor= "white"
             size.style.color = "black"
         })
-        size.style.blackgroundColor= "black"
+        size.style.backgroundColor= "black"
         size.style.color = "white"
     })
 })
