@@ -108,3 +108,33 @@ menuItems.forEach( (item, index) => {
         console.log(choosenProduct)
     })
 })
+
+currentProductColors.forEach( (color, index) => {
+    color.addEventListener("click", () => {
+        currrentProductImg.src = choosenProduct.colors[index].img
+        //console.log(currrentProductImg.src, choosenProduct.colors[index].img)
+    })
+})
+
+currentProductSizes.forEach( (size) => {
+    size.addEventListener("click", () => {
+        currentProductSizes.forEach( (size) =>{
+            size.style.blackgroundColor= "white"
+            size.style.color = "black"
+        })
+        size.style.blackgroundColor= "black"
+        size.style.color = "white"
+    })
+})
+
+const productButton = document.querySelector(",productButton")
+const payment = document.querySelector(".payment")
+const close = documente.querySelector(".close")
+
+productButton.addEventListener("click", () =>{
+    payment.style.display = "flex"
+})
+
+close.addEventListener("click", () => {
+    payment.style.display = "none"
+})
